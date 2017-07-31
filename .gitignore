@@ -1,0 +1,9 @@
+#vim rubbish
+*.swp
+*.un~
+
+# LaTeX files
+*.aux
+*.log
+*.toc
+*.out
