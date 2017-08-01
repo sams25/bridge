@@ -8,13 +8,17 @@
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 \usepackage[dvipsnames]{xcolor}
-\usepackage{txfonts}
 \usepackage{parskip}
 
+%Overriding hollow suits
+\DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
+\DeclareMathSymbol{\varheart}{\mathalpha}{extraup}{86}
+\DeclareMathSymbol{\vardiamond}{\mathalpha}{extraup}{87}
+
 % Symbols
-\newcommand{\Hs}{\textcolor{Red}{$\varheartsuit$}}
+\newcommand{\Hs}{\textcolor{Red}{$\varheart$}}
 \newcommand{\Ss}{\textcolor{Blue}{$\spadesuit$}}
-\newcommand{\Ds}{\textcolor{Orange}{$\vardiamondsuit$}}
+\newcommand{\Ds}{\textcolor{Orange}{$\vardiamond$}}
 \newcommand{\Cs}{\textcolor{Green}{$\clubsuit$}}
 \newcommand{\NTs}{\textbf{\footnotesize{NT}}}
 % Suits
@@ -37,16 +41,16 @@
 \section{Introduction}
 
 \subsection{Named conventions that we use}
-In short, our system is based on
+In short, our system is based on:
 \begin{itemize}
     \item ACOL (4 card major)
     \item Strong \C{2}
     \item Three Weak Twos
-    \item Weak \NT{1}
+    \item Weak\NT~
     \item Stayman and Transfers
     \item Ogust convention
     \item Jacoby \NT{2}
-    \item Gerber \C{4} for \NT~contracts
+    \item Gerber \C{4} for\NT~ contracts
     \item Blackwood (1430 Roman Key Card) \NT{4} for suited contracts
 \end{itemize}
 
