@@ -27,6 +27,10 @@
   \newcommand{\D}[1]{\textcolor{Orange}{\textbf{#1}\Ds}}
   \newcommand{\C}[1]{\textcolor{Green}{\textbf{#1}\Cs}}
   \newcommand{\NT}[1]{\textbf{#1\NTs}}
+  \newcommand{\suits}[1]{\textbf{#1}\Cs\Ds\Hs\Ss}
+  \newcommand{\minors}[1]{\textcolor{Brown}{\textbf{#1}}\Cs\Ds}
+  \newcommand{\majors}[1]{\textcolor{Purple}{\textbf{#1}}\Hs\Ss}
+  \newcommand{\notclubs}[1]{\textbf{#1}\Ds\Hs\Ss}
 
 % Annotations
 \newcommand{\note}[1]{\textcolor{gray}{#1}}
@@ -43,7 +47,7 @@
 \subsection{Named conventions that we use}
 In short, our system is based on:
 \begin{itemize}
-    \item ACOL (4 card major)
+    \item ACOL (4 card majors)
     \item Strong \C{2}
     \item Three Weak Twos
     \item Weak\NT~
@@ -71,6 +75,130 @@ This is how a hand is displayed. \H{KJ2} \S{AT98} \D{KQ532} \C{7} (13).\\
 \note{Notice that all unbalanced hands have a 5-card suit, except for a 4-4-4-1 split.}
 
 \section{Opening bids}
+
+\subsection{Balanced Hands}
+
+0-11 HCP: Pass\\
+12-14 HCP: \NT{1}\\
+15-19 HCP: \textbf{1}\Cs\Ds\Hs\Ss\\
+20-22 HCP: \NT{2}\\
+23-37 HCP: \C{2}
+
+\subsection{Unbalanced Hands}
+\subsubsection{5 card longest suit}
+\subsubsection{6 card longest suit}
+0-5 HCP: Pass \\
+6-9 HCP: \notclubs{2}\footnote{If the 6 card suit is clubs, then pass unless you can open at the 1 level with Rule of 20.}\\
+8-19 HCP: \suits{1}\\
+20-33 HCP: \C{2}
+\subsubsection{7 card longest suit}
+0-3 HCP: Pass \\
+4-5 HCP: \notclubs{2}\footnote{If the 7 card suit is clubs then pass.}\\
+6-10 HCP: \suits{3}\\
+\subsubsection{8 card longest suit}
+\subsubsection{9 card longest suit}
+\subsubsection{10 card longest suit}
+\subsubsection{11 card longest suit}
+\subsubsection{12 card longest suit}
+\subsubsection{13 card longest suit}
+10 HCP: \suits{7}
+
+\section{Opening Bids (Alternative)}
+
+\subsection{1 level bids}
+
+\subsubsection{\C{1}}
+\begin{itemize}
+\item Balanced, 15-19 HCP, 5 or 4 clubs.
+\item Unbalanced, 9-19 HCP, 4 or more clubs, clubs longest suit.
+\end{itemize}
+
+\subsubsection{\D{1}}
+\begin{itemize}
+\item Balanced, 15-19 HCP, 5 or 4 diamonds, no 4 or 5 card clubs.
+\item Unbalanced, 9-19 HCP, more diamonds than clubs, diamonds longest suit.
+\end{itemize} 
+
+\subsubsection{\H{1}}
+
+\begin{itemize}
+\item Balanced, 15-19 HCP, 5 or 4 hearts, no 4 or 5 card clubs or diamonds.
+\item Unbalanced, 9-19 HCP, more hearts than diamonds or clubs, hearts longest suit.
+\end{itemize}
+
+\subsubsection{\S{1}}
+
+\begin{itemize}
+\item Balanced, 15-19 HCP, 5 or 4 spades, no 4 or 5 card other suit.
+\item Unbalanced, 9-19 HCP, more spades than other suits, spades longest suit.
+\end{itemize}
+
+\subsubsection{\NT{1}}
+
+\begin{itemize}
+\item Balanced, 12-14 HCP.
+\end{itemize}
+
+\subsection{2 level bids}
+
+\subsubsection{\C{2}}
+
+\begin{itemize}
+\item Balanced, 23-37 HCP.
+\item Unbalanced, 20-37 HCP.
+\end{itemize}
+
+\subsubsection{\notclubs{2}}
+
+\begin{itemize}
+\item 6-9 HCP, 6 card suit
+\item 4-5 HCP, 7 card suit
+\item 3-2 HCP, 8 card suit
+\end{itemize}
+
+\subsubsection{\NT{2}}
+
+\begin{itemize}
+\item Balanced, 20-22 HCP
+\end{itemize}
+
+\subsection{3 level bids}
+
+\subsubsection{\suits{3}}
+
+\begin{itemize}
+\item 6-9 HCP, 7 card suit
+\item 4-5 HCP, 8 card suit
+\end{itemize}
+
+\subsubsection{\NT{3}}
+
+Not used
+
+\subsection{4 level bids}
+
+\subsubsection{\minors{4}}
+
+\begin{itemize}
+\item Some sort of pre-emptive bid.
+\end{itemize}
+
+\subsubsection{\majors{4}}
+
+\begin{itemize}
+\item Can make game in a major with minimal help from partner, who might pass an opening at the 1 level. Works as a pre-emptive too.
+\end{itemize}
+
+\subsubsection{\NT{4}}
+
+Not used
+
+\subsection{7 level bids}
+
+\begin{itemize}
+\item Opener can make grand slam by themselves.
+\end{itemize}
+
 \section{Responses to Opener}
 \section{Opener's rebids}
 
